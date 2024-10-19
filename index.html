@@ -14,23 +14,60 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    body {
+      min-height: 100vh;
+      align-items: center;
+    }
+
+    .container{
+      width: 90%;
+      max-width: 500px;
+      max-height: 95vh;
+      margin: 20px auto;
+      padding: 2rem;
+      overflow: auto;
+      
+    }
+
+    .img {
+      width: 100%;
+      height: auto;
+      border-radius: .5rem;
+    }
+
+    .button {
+      padding: .5rem;
+      font-size: 1rem;
+    }
+
+    @media (max-width:768px) {
+      .container{
+        max-width: none;
+        padding: 1rem;
+      }
+      .button {
+        padding: 1rem;
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
-<body class="bg-gray-200 flex justify-center">
-  <div class="p-8 w-1/2 h-auto flex flex-col items-center bg-blue-400 rounded-2xl border-yellow-200 border-solid">
-    <img class="rounded-lg" src="assets/images/avatar-jessica.jpeg" alt="picture of jessica">
+<body class="bg-gray-200 flex justify-center min-h-screen">
+  <div class="container p-8 h-auto flex flex-col items-center bg-blue-400 rounded-2xl border-yellow-200 border-solid">
+    <img class="rounded-lg h-8 w-8 object-cover" src="assets/images/avatar-jessica.jpeg" alt="picture of jessica">
     <div class="flex flex-col my-2 items-center">
-      <p class="text-3xl"> Jessica Randall</p>
+      <p class="text-xl"> Jessica Randall</p>
       <p class="text-lg italic my-0">London, United Kingdon</p>
       <p class="text-md my-4">Front-end developer and avid reader
       </p>
     </div>
-    <div class="flex flex-col gap-3 my-6 font-semibold justify-center w-full">
-      <button onclick="window.open('https://www.google.com')" class="border-2 bg-yellow-600 hover:bg-green-400 hover:font-extrabold rounded-lg py-3">Github</button>
-      <button onclick="window.open('https://www.google.com')" class="border-2 bg-yellow-600 hover:bg-green-400 hover:font-extrabold rounded-lg py-3">Frontend Mentor</button>
-      <button onclick="window.open('https://www.google.com')" class="border-2 bg-yellow-600 hover:bg-green-400 hover:font-extrabold rounded-lg py-3">LinkedIn</button>
-      <button onclick="window.open('https://www.google.com')" class="border-2 bg-yellow-600 hover:bg-green-400 hover:font-extrabold rounded-lg py-3">Twitter</button>
-      <button onclick="window.open('https://www.google.com')" class="border-2 bg-yellow-600 hover:bg-green-400 hover:font-extrabold rounded-lg py-3">Instagram</button>
+    <div class="flex flex-col gap-2 my-4 font-semibold justify-center w-full">
+      <a href='https://www.google.com' class="flex items-center justify-center button border-2 bg-yellow-600 hover:bg-green-400 hover:font-extrabold rounded-lg">Github</a>
+      <a href='https://www.google.com' class="flex items-center justify-center button border-2 bg-yellow-600 hover:bg-green-400 hover:font-extrabold rounded-lg">Frontend Mentor</a>
+      <a href='https://www.google.com' class="flex items-center justify-center button border-2 bg-yellow-600 hover:bg-green-400 hover:font-extrabold rounded-lg">LinkedIn</a>
+      <a href='https://www.google.com' class="flex items-center justify-center button border-2 bg-yellow-600 hover:bg-green-400 hover:font-extrabold rounded-lg">Twitter</a>
+      <a href='https://www.google.com' class=" flex items-center justify-center button border-2 bg-yellow-600 hover:bg-green-400 hover:font-extrabold rounded-lg">Instagram</a>
     </div>
       <div class="attribution">
           Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Magali</a>.
